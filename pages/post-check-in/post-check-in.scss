@@ -1,0 +1,32 @@
+/* package-user/pages/post-check-in/post-check-in.wxss */
+
+.content {
+    padding: 30rpx;
+
+    &__box {
+        height: 262rpx;
+        width: 100%;
+        background-color: #fff;
+        position: relative;
+    }
+
+    &__textarea {
+        height: 100%;
+        width: 100%;
+        padding: 32rpx;
+        box-sizing: border-box;
+    }
+
+    & .num {
+        position: absolute;
+        right: 32rpx;
+        bottom: 32rpx;
+        color: #999999;
+        font-size: 24rpx;
+    }
+
+    & .upload__box{
+        padding: 24rpx;
+        background-color: #fff;
+    }
+}

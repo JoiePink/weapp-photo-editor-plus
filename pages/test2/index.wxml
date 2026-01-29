@@ -1,0 +1,21 @@
+<!-- index.wxml -->
+<view class="test2">
+  <!-- <button bindtap="updateComponnet">组件更新</button> -->
+  <simple-crop wx:if="{{visible}}" size="{{size}}" src="{{src}}" cropSizePercent="{{cropSizePercent}}" borderColor="{{borderColor}}" bindcropUpload="uploadCallback" bindcropClose="closeCallback" bindcropCrop="cropCallback"></simple-crop>
+  <view class="show-result">
+    <image class="show-result-image" mode="widthFix" src="{{result}}"></image>
+    <image class="show-result-image-bg" mode="widthFix" src="{{list[currentIndex]}}"></image>
+  </view>
+  <view class="operators">
+    <view style="font-size: 60rpx;">×</view>
+    <view style="font-size: 60rpx;" bindtap="goToPostCheckIn">√</view>
+  </view>
+  <scroll-view scroll-x class="scroll" show-scrollbar="{{false}}" enhanced>
+    <view class="item-group">
+      <view wx:for="{{list}}" class="item" bind:tap="onSelect" data-index="{{index}}" style=" {{currentIndex===index? 'border: 4rpx solid #d5bb80':''}}">
+        <image class="item-img" src="{{item}}" lazy-load="false" binderror="" bindload="" />
+      </view>
+    </view>
+  </scroll-view>
+  <canvas class="poster__canvas" canvas-id="canvasPoster" style="width:{{photoWidth}}px;height:{{photoHeight}}px;zoom:{{canvasZoom}}%"></canvas>
+</view>
