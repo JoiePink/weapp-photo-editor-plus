@@ -1,0 +1,28 @@
+.page{
+    display: flex;
+    flex-direction: column;
+    gap: 80rpx;
+    align-items: center;
+    padding-top: 80rpx;
+}
+
+.beauty-after{
+    display: flex;
+    flex-direction: column;
+    gap: 20rpx;
+
+    &-img{
+        width: 600rpx;
+        height: 848rpx;
+    }
+}
+
+.beauty-before{
+    display: flex;
+    flex-direction: column;
+    gap: 20rpx;
+
+    &-img{
+        width: 600rpx;
+    }
+}

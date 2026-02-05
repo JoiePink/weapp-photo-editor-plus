@@ -1,0 +1,29 @@
+<!-- index.wxml -->
+<view class="beauty">
+  <simple-crop wx:if="{{visible}}" size="{{size}}" src="{{src}}" cropSizePercent="{{cropSizePercent}}" borderColor="{{borderColor}}" bindcropUpload="uploadCallback" bindcropClose="closeCallback" bindcropCrop="cropCallback"></simple-crop>
+  <view class="beauty__result" bindtap="updateComponnet">
+    <image class="beauty__result-image" mode="widthFix" src="{{result}}"></image>
+    <image class="beauty__result-image beauty__result-image--bg" mode="widthFix" src="{{list[currentIndex]}}"></image>
+  </view>
+  <view class="beauty__operators">
+    <view class="beauty__operator beauty__operator--close" bindtap="goBack">×</view>
+    <view class="beauty__operator beauty__operator--confirm" bindtap="goToIndex">√</view>
+  </view>
+  <scroll-view scroll-x class="beauty__scroll" show-scrollbar="{{false}}" enhanced>
+    <view class="beauty__thumbs">
+      <view
+        wx:for="{{list}}"
+        class="beauty__thumb {{currentIndex===index ? 'beauty__thumb--active' : ''}}"
+        bind:tap="onSelect"
+        data-index="{{index}}"
+      >
+        <image class="beauty__thumb-img" src="{{item}}" lazy-load="false" binderror="" bindload="" />
+      </view>
+    </view>
+  </scroll-view>
+  <canvas
+    class="beauty__poster-canvas"
+    canvas-id="canvasPoster"
+    style="width:{{photoWidth}}px;height:{{photoHeight}}px;zoom:{{canvasZoom}}%"
+  ></canvas>
+</view>

@@ -19,7 +19,7 @@
     "checkInvalidKey": true,
     "ignoreDevUnusedFiles": true
   },
-  "libVersion": "3.14.1",
+  "libVersion": "3.13.2",
   "condition": {
     "miniprogram": {
       "list": [
@@ -27,8 +27,8 @@
           "name": "pages/test2/index",
           "pathName": "pages/test2/index",
           "query": "",
-          "scene": null,
-          "launchMode": "default"
+          "launchMode": "default",
+          "scene": null
         },
         {
           "name": "pages/post-check-in/post-check-in",

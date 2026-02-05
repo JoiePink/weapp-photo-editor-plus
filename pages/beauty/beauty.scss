@@ -1,0 +1,90 @@
+/** beauty.scss - BEM + SCSS **/
+
+.beauty {
+  padding-bottom: 200rpx;
+
+  &__result {
+    width: 100%;
+    position: relative;
+  }
+
+  &__result-image {
+    width: 100vw;
+
+    &--bg {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100vw;
+    }
+  }
+
+  &__operators {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10rpx 40rpx;
+    box-sizing: border-box;
+    font-size: 40rpx;
+  }
+
+  &__operator {
+    font-size: 60rpx;
+
+    &--close {
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    &--confirm {
+      cursor: pointer;
+      z-index: 1000;
+    }
+  }
+
+  &__scroll {
+    width: 100%;
+    white-space: nowrap;
+  }
+
+  &__thumbs {
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+    padding: 20rpx 20rpx;
+  }
+
+  &__thumb {
+    flex-shrink: 0;
+    margin-right: 16rpx;
+    width: 180rpx;
+    height: 240rpx;
+    background-color: #f7f7f7;
+    padding: 20rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+
+    &--active {
+      border: 4rpx solid #d5bb80;
+    }
+
+    &-img {
+      width: 100%;
+      height: 100%;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__poster-canvas {
+    position: absolute;
+    left: -1999rpx;
+    top: 200rpx;
+  }
+}
+

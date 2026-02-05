@@ -1,9 +1,7 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs",
-    "pages/post-check-in/post-check-in",
-    "pages/test2/index"
+    "pages/beauty/beauty"
   ],
   "window": {
     "navigationBarTextStyle": "black",
